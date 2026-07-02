@@ -125,7 +125,7 @@ nav a:hover{
     gap:25px;
 }
 
-/* CARD (LIGHT GLOW ADDED) */
+/* CARD */
 .project-card{
     background:#0b1320;
     border:1px solid rgba(255,255,255,0.12);
@@ -141,23 +141,27 @@ nav a:hover{
     box-shadow:0 0 16px rgba(255,255,255,0.06);
 }
 
-/* IMAGE (BRIGHTER LOOK) */
+/* IMAGE (BRIGHT LOOK) */
 .project-card img{
     width:100%;
     height:220px;
     object-fit:contain;
     padding:10px;
     background:#0b1320;
-    filter: brightness(1.6) contrast(1.25) saturate(1.4);
+    filter: brightness(1.7) contrast(1.25) saturate(1.4);
     transition:0.3s;
+
+    /* REMOVE GOOGLE SEARCH / LENS FEEL */
+    -webkit-user-drag:none;
+    user-select:none;
 }
 
-.project-card:hover img{
+.project-card img:hover{
     transform:scale(1.03);
-    filter: brightness(1.75) contrast(1.3) saturate(1.5);
+    filter: brightness(1.85) contrast(1.3) saturate(1.5);
 }
 
-/* TEXT (UNCHANGED AS REQUESTED) */
+/* TEXT (UNCHANGED) */
 .project-card h3{
     padding:12px 15px 0;
     font-size:16px;
@@ -170,7 +174,7 @@ nav a:hover{
     color:#ccc;
 }
 
-/* FLOATING BUTTONS (HOME PAGE STYLE FIXED) */
+/* FLOATING BUTTONS (HOME PAGE EXACT SIZE) */
 .floating{
     position:fixed;
     right:20px;
@@ -222,7 +226,7 @@ nav{
 .hero h1{font-size:38px;}
 .hero p{font-size:15px;}
 
-/* FIX ICON SIZE ON MOBILE */
+/* MOBILE ICON FIX */
 .floating a{
     width:48px;
     height:48px;
@@ -272,7 +276,6 @@ nav a{font-size:14px;}
 
 <section class="projects">
 
-<!-- PROJECTS -->
 <div class="project-card">
 <img src="https://cdn.corenexis.com/f/xqxxZwkw2Tp.png">
 <h3>GA Drawing</h3>
