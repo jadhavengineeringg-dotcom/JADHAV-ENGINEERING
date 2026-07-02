@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Contact - Jadhav Engineering</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -11,218 +10,195 @@
 
 <style>
 
-/* RESET */
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
 }
 
 html,body{
-width:100%;
-background:#0b1320;
-color:#fff;
+    width:100%;
+    overflow-x:hidden;
+    background:#0b1320;
+    color:#fff;
+    scroll-behavior:smooth;
 
-/* keep scrolling but hide scrollbar */
-overflow-x:hidden;
-overflow-y:scroll;
-scroll-behavior:smooth;
+    /* ✅ Hide scrollbar but keep scrolling */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
 }
 
-/* HIDE SCROLLBAR COMPLETELY */
-
-/* Chrome, Edge, Safari */
-body::-webkit-scrollbar{
-width:0px;
-background:transparent;
-}
-
-/* Firefox */
-html{
-scrollbar-width:none;
-}
-
-/* IE / old Edge */
-body{
--ms-overflow-style:none;
+/* Chrome, Safari, Opera */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
 }
 
 /* HEADER */
 header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:12px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:#0b1320;
-border-bottom:1px solid rgba(255,255,255,0.1);
-z-index:1000;
-flex-wrap:wrap;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:12px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0b1320;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    z-index:1000;
 }
 
+/* LOGO */
 .logo{
-display:flex;
-align-items:center;
-gap:12px;
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
 .logo-circle{
-width:60px;
-height:60px;
-border-radius:50%;
-background:#fff;
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
 }
 
 .logo-circle img{
-width:85%;
+    width:85%;
 }
 
-.logo-text h2{font-size:16px;}
-.logo-text p{font-size:10px;color:#ccc;}
+.logo-text h2{
+    font-size:16px;
+}
 
+.logo-text p{
+    font-size:10px;
+    color:#ccc;
+}
+
+/* NAV */
 nav{
-display:flex;
-gap:25px;
+    display:flex;
+    align-items:center;
+    gap:25px;
 }
 
 nav a{
-color:#fff;
-text-decoration:none;
-font-size:16px;
-transition:0.3s;
+    color:#fff;
+    text-decoration:none;
+    font-size:16px;
+    transition:0.3s;
+    white-space:nowrap;
 }
 
 nav a:hover{
-color:#ff7b00;
+    color:#ff7b00;
 }
 
 /* HERO */
 .hero{
-min-height:55vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:120px 8% 40px;
-background:
-linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
-url('https://images.unsplash.com/photo-1581092160562-40aa08e78837') center/cover no-repeat;
+    min-height:55vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 8% 40px;
+    background:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+    url('https://cdn.corenexis.com/f/mVUYQ6YSf6g.jpg') center/cover no-repeat;
 }
 
 .hero h1{
-font-size:50px;
+    font-size:50px;
 }
 
 .hero span{
-color:#ff7b00;
+    color:#ff7b00;
 }
 
 .hero p{
-margin-top:12px;
-color:#ddd;
-font-size:18px;
+    margin-top:15px;
+    color:#ddd;
+    font-size:18px;
 }
 
 /* CONTACT */
 .contact{
-padding:70px 8%;
-display:flex;
-justify-content:center;
+    padding:70px 8%;
+    display:flex;
+    justify-content:center;
 }
 
 .contact-card{
-max-width:700px;
-width:100%;
-background:rgba(255,255,255,0.05);
-padding:35px;
-border-radius:18px;
-border:1px solid rgba(255,255,255,0.1);
-backdrop-filter:blur(10px);
-transition:0.3s;
-}
-
-.contact-card:hover{
-transform:translateY(-5px);
+    width:100%;
+    max-width:750px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:35px;
 }
 
 .contact-card h3{
-font-size:28px;
-color:#ff7b00;
-margin-bottom:20px;
+    font-size:30px;
+    color:#ff7b00;
+    margin-bottom:25px;
+    text-align:center;
 }
 
 .info-item{
-display:flex;
-align-items:center;
-gap:15px;
-padding:15px;
-margin:12px 0;
-border-radius:12px;
-background:rgba(255,255,255,0.04);
-transition:0.3s;
-}
-
-.info-item:hover{
-background:rgba(255,123,0,0.1);
-transform:translateX(5px);
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:18px;
+    margin-bottom:15px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.04);
 }
 
 .info-item i{
-width:45px;
-height:45px;
-display:flex;
-justify-content:center;
-align-items:center;
-background:rgba(255,123,0,0.15);
-color:#ff7b00;
-border-radius:10px;
-font-size:18px;
-}
-
-.info-text h4{
-font-size:15px;
-margin:0;
+    width:55px;
+    height:55px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(255,123,0,0.15);
+    color:#ff7b00;
+    border-radius:12px;
+    font-size:22px;
+    flex-shrink:0;
 }
 
 .info-text span{
-font-size:13px;
-color:#ccc;
+    color:#ccc;
+    word-break:break-word;
 }
 
 /* FLOATING BUTTONS */
 .floating{
-position:fixed;
-right:20px;
-bottom:20px;
-display:flex;
-flex-direction:column;
-gap:10px;
-z-index:999;
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    z-index:999;
 }
 
 .floating a{
-width:55px;
-height:55px;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-color:#fff;
-font-size:22px;
-text-decoration:none;
-transition:0.3s;
-}
-
-.floating a:hover{
-transform:scale(1.1);
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:22px;
+    text-decoration:none;
 }
 
 .phone{background:#ff7b00;}
@@ -230,16 +206,48 @@ transform:scale(1.1);
 .whatsapp{background:#25d366;}
 
 /* RESPONSIVE */
+@media(max-width:1024px){
+.hero h1{font-size:42px;}
+}
+
 @media(max-width:768px){
 
+header{
+    flex-direction:column;
+    gap:10px;
+}
+
 nav{
-justify-content:center;
-gap:15px;
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.hero{
+    padding-top:160px;
+}
+
+.hero h1{font-size:34px;}
+.hero p{font-size:16px;}
+}
+
+@media(max-width:480px){
+
+nav a{
+    font-size:14px;
 }
 
 .hero h1{
-font-size:35px;
+    font-size:28px;
 }
+
+.floating a{
+    width:48px;
+    height:48px;
+    font-size:18px;
+}
+
 }
 
 </style>
@@ -277,7 +285,6 @@ font-size:35px;
 </section>
 
 <section class="contact">
-
 <div class="contact-card">
 
 <h3>Contact Details</h3>
@@ -285,7 +292,6 @@ font-size:35px;
 <div class="info-item">
 <i class="fas fa-phone"></i>
 <div class="info-text">
-<h4>Phone</h4>
 <span>+91 8976186381</span>
 </div>
 </div>
@@ -293,7 +299,6 @@ font-size:35px;
 <div class="info-item">
 <i class="fas fa-envelope"></i>
 <div class="info-text">
-<h4>Email</h4>
 <span>jadhavengineeringg@gmail.com</span>
 </div>
 </div>
@@ -301,13 +306,11 @@ font-size:35px;
 <div class="info-item">
 <i class="fas fa-map-marker-alt"></i>
 <div class="info-text">
-<h4>Location</h4>
 <span>Bhayandar, Thane, Maharashtra</span>
 </div>
 </div>
 
 </div>
-
 </section>
 
 <div class="floating">
