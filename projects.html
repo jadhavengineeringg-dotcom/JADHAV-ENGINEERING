@@ -33,6 +33,14 @@ body::-webkit-scrollbar{
     display:none;
 }
 
+/* ✅ REMOVE GOOGLE LENS / IMAGE HOLD FEATURES */
+img{
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    pointer-events: auto;
+}
+
 /* HEADER */
 header{
     position:fixed;
@@ -125,7 +133,7 @@ nav a:hover{
     gap:25px;
 }
 
-/* CARD (NO EXTERNAL FEATURE / FULL STATIC) */
+/* CARD */
 .project-card{
     background:#0b1320;
     border:1px solid rgba(255,255,255,0.12);
@@ -133,7 +141,6 @@ nav a:hover{
     overflow:hidden;
     transition:0.3s;
     box-shadow:0 0 10px rgba(255,255,255,0.04);
-    cursor:default;
 }
 
 .project-card:hover{
