@@ -10,6 +10,7 @@
 
 <style>
 
+/* RESET */
 *{
     margin:0;
     padding:0;
@@ -22,15 +23,14 @@ body{
     color:#fff;
 }
 
-/* ✅ HIDE SCROLLBAR */
+/* HIDE SCROLLBAR */
 html, body{
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
-
 html::-webkit-scrollbar,
 body::-webkit-scrollbar{
-    display: none;
+    display:none;
 }
 
 /* HEADER */
@@ -43,11 +43,12 @@ header{
     justify-content:space-between;
     align-items:center;
     background:#0b1320;
-    border-bottom:1px solid #ffffff1a;
+    border-bottom:1px solid rgba(255,255,255,0.1);
     z-index:1000;
     flex-wrap:wrap;
 }
 
+/* LOGO */
 .logo{
     display:flex;
     align-items:center;
@@ -60,8 +61,8 @@ header{
     border-radius:50%;
     background:#fff;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     overflow:hidden;
 }
 
@@ -69,19 +70,12 @@ header{
     width:85%;
 }
 
-.logo-text h2{
-    font-size:16px;
-}
-
-.logo-text p{
-    font-size:10px;
-    color:#ccc;
-}
+.logo-text h2{ font-size:16px; }
+.logo-text p{ font-size:10px; color:#ccc; }
 
 /* NAV */
 nav{
     display:flex;
-    align-items:center;
     gap:25px;
     flex-wrap:wrap;
 }
@@ -99,15 +93,15 @@ nav a:hover{
 
 /* HERO */
 .hero{
-    min-height:60vh;
+    min-height:55vh;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
     padding:120px 8% 40px;
     background:
-    linear-gradient(#000c,#000c),
-    url('https://cdn.corenexis.com/f/mVUYQ6YSf6g.jpg') center/cover;
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+    url('https://cdn.corenexis.com/f/mVUYQ6YSf6g.jpg') center/cover no-repeat;
 }
 
 .hero h1{
@@ -131,19 +125,22 @@ nav a:hover{
     gap:25px;
 }
 
-/* ✅ FIXED CARD (NO BLUE COLOR) */
+/* CARD */
 .project-card{
-    background:#0b1320;   /* same as page */
-    border:1px solid #ffffff1a;
+    background:#0b1320;
+    border:1px solid rgba(255,255,255,0.12);
     border-radius:15px;
     overflow:hidden;
     transition:0.3s;
+
+    /* LIGHT GLOW */
+    box-shadow: 0 0 8px rgba(255,255,255,0.04);
 }
 
-/* NO ORANGE BACKGROUND */
 .project-card:hover{
-    transform:translateY(-8px);
-    border-color:#ffffff1a;
+    transform:translateY(-6px);
+    border-color:rgba(255,255,255,0.2);
+    box-shadow: 0 0 14px rgba(255,255,255,0.07);
 }
 
 /* IMAGE */
@@ -153,30 +150,29 @@ nav a:hover{
     object-fit:contain;
     padding:10px;
     background:#0b1320;
-    filter: brightness(1.5) contrast(1.25) saturate(1.35);
-    transition:0.4s ease;
+    filter: brightness(1.55) contrast(1.25) saturate(1.4);
+    transition:0.3s;
 }
 
 .project-card:hover img{
-    transform:scale(1.05);
-    filter: brightness(1.6) contrast(1.3) saturate(1.45);
+    transform:scale(1.03);
+    filter: brightness(1.7) contrast(1.3) saturate(1.5);
 }
 
-/* TEXT */
+/* TEXT (NO COLOR CHANGE AS YOU ASKED) */
 .project-card h3{
     padding:12px 15px 0;
     font-size:16px;
-    color:#ff7b00;
+    color:#ff7b00; /* unchanged */
 }
 
 .project-card p{
     padding:8px 15px 15px;
     font-size:13px;
-    color:#ccc;
-    line-height:1.4;
+    color:#ccc; /* unchanged */
 }
 
-/* FLOATING BUTTONS (SMALL CLEAN SIZE) */
+/* FLOATING BUTTONS (HOME PAGE SIZE) */
 .floating{
     position:fixed;
     right:20px;
@@ -188,20 +184,20 @@ nav a:hover{
 }
 
 .floating a{
-    width:50px;
-    height:50px;
+    width:55px;
+    height:55px;
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
     color:#fff;
-    font-size:18px;
+    font-size:22px;
     text-decoration:none;
     transition:0.3s;
 }
 
 .floating a:hover{
-    transform:scale(1.05);
+    transform:scale(1.1);
 }
 
 .phone{background:#ff7b00;}
@@ -210,7 +206,6 @@ nav a:hover{
 
 /* RESPONSIVE */
 @media(max-width:768px){
-
 header{
     flex-direction:column;
     gap:10px;
@@ -226,7 +221,7 @@ nav{
 }
 
 .hero h1{font-size:38px;}
-.hero p{font-size:15px;}
+hero p{font-size:15px;}
 }
 
 @media(max-width:480px){
@@ -265,14 +260,13 @@ nav a{font-size:14px;}
 <section class="hero">
 <div>
     <h1>Our <span>Projects</span></h1>
-    <p>Discover our portfolio of completed engineering design, drafting, and fabrication projects.</p>
+    <p>Explore our portfolio of completed engineering design, drafting, and fabrication work.</p>
 </div>
 </section>
 
 <section class="projects">
 
-<!-- ALL PROJECTS KEPT -->
-
+<!-- PROJECTS -->
 <div class="project-card">
 <img src="https://cdn.corenexis.com/f/xqxxZwkw2Tp.png">
 <h3>GA Drawing</h3>
@@ -323,6 +317,7 @@ nav a{font-size:14px;}
 
 </section>
 
+<!-- FLOATING BUTTONS -->
 <div class="floating">
 
 <a href="tel:+918976186381" class="phone">
