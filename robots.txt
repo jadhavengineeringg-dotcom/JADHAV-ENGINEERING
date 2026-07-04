@@ -4,5 +4,6 @@ User-agent: *
 Disallow: /admin/
 Disallow: /private/
 Disallow: https://jadhav-engineering.vercel.app/sitemap.xml
+Disallow: https://jadhavengineering.xyz/
 
 Sitemap: https://www.w3schools.com/sitemap.xml
