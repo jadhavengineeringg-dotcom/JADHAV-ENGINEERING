@@ -186,28 +186,32 @@ grid-template-columns:repeat(2, 1fr);
 }
 }
 
+/* FIXED MOBILE HEADER (LIKE HOME PAGE) */
 @media(max-width:768px){
 
 header{
-flex-direction:column;
-gap:10px;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    padding:12px 8%;
 }
 
 nav{
-justify-content:center;
-gap:15px;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
 .hero-title{
-padding-top:160px;
+    padding-top:160px;
 }
 
 .hero-title h1{
-font-size:36px;
+    font-size:36px;
 }
 
 .services{
-grid-template-columns:1fr;
+    grid-template-columns:1fr;
 }
 }
 
@@ -240,8 +244,7 @@ font-size:18px;
 </style>
 </head>
 
-<!-- ONLY CHANGE: RIGHT CLICK OFF -->
-<body oncontextmenu="return false;">
+<body>
 
 <header>
 
