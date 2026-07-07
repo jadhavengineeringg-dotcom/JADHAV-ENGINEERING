@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO TITLE -->
+<title>Jadhav Engineering | Mechanical Design, CAD Drafting, 3D Modeling & Engineering Drawings Services</title>
+
+<!-- SEO META -->
+<meta name="description" content="Jadhav Engineering provides professional Mechanical Design services including 2D drafting, 3D CAD modeling, GA drawings, fabrication drawings, BOM preparation, AutoCAD, SolidWorks, UG NX and Creo services in India.">
+<meta name="keywords" content="Mechanical Design Services India, CAD Drafting, AutoCAD Drafting Services, SolidWorks Modeling, UG NX Design, Creo Modeling, Engineering Drawings, GA Drawings, Fabrication Drawings, BOM Preparation, 3D Modeling India">
+<meta name="author" content="Jadhav Engineering">
+
+<!-- CANONICAL -->
+<link rel="canonical" href="https://jadhavengineering.xyz/">
+
+<!-- OPEN GRAPH (FACEBOOK / WHATSAPP SHARING) -->
+<meta property="og:title" content="Jadhav Engineering | Mechanical Design & CAD Services">
+<meta property="og:description" content="Professional Mechanical Design, 2D Drafting, 3D Modeling, GA Drawings, Fabrication Drawings & Engineering Solutions in India.">
+<meta property="og:image" content="https://cdn.corenexis.com/files/c/5896827720.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jadhavengineering.xyz/">
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" href="https://cdn.corenexis.com/files/c/5896827720.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f7fc;
+    color:#333;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(rgba(36,33,199,0.85),rgba(0,20,80,0.85)),
+    url("https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0");
+    background-size:cover;
+    background-position:center;
+    min-height:100vh;
+    color:#fff;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.4);
+}
+
+/* LOGO */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:contain;
+    background:white;
+    padding:5px;
+}
+
+.logo span{
+    color:white;
+    font-size:22px;
+    font-weight:700;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    margin-left:25px;
+    font-weight:500;
+}
+
+/* HERO */
+.hero{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    height:80vh;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    font-size:28px;
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:800px;
+    line-height:1.8;
+}
+
+/* BUTTONS */
+.hero-buttons{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 35px;
+    background:#0b6dff;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:600;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn.secondary{
+    background:#ffb400;
+    color:#00123b;
+}
+
+/* SECTIONS */
+section{
+    padding:80px 8%;
+}
+
+.title{
+    text-align:center;
+    font-size:40px;
+    color:#002c7d;
+    margin-bottom:50px;
+}
+
+/* ABOUT */
+.about{
+    text-align:center;
+    max-width:1000px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* SERVICES */
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#0039a6;
+    margin-bottom:10px;
+}
+
+/* PORTFOLIO */
+.portfolio{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.project{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.project:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.project img{
+    width:100%;
+    height:280px;
+    object-fit:contain;
+    background:white;
+    padding:10px;
+}
+
+/* ADDED SEO IMAGE ALT SUPPORT (NO STYLE CHANGE) */
+.project img{
+    /* kept same design */
+}
+
+.project h3{
+    padding:15px;
+    text-align:center;
+    color:#0039a6;
+    font-size:15px;
+}
+
+@media(max-width:900px){
+    .portfolio{
+        grid-template-columns:1fr;
+    }
+}
+
+/* SOFTWARE */
+.software{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.software div{
+    background:#002c7d;
+    color:white;
+    padding:15px 30px;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:600;
+}
+
+/* CONTACT */
+.contact{
+    background:#002c7d;
+    color:white;
+    text-align:center;
+}
+
+.contact h2{
+    margin-bottom:20px;
+}
+
+.contact p{
+    margin:12px 0;
+    font-size:18px;
+}
+
+/* FOOTER */
+footer{
+    background:#00123b;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* FLOATING BUTTONS */
+.whatsapp,
+.call,
+.email{
+    position:fixed;
+    right:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    color:white;
+    z-index:1000;
+    text-decoration:none;
+}
+
+.whatsapp{ bottom:20px; background:#25D366; }
+.call{ bottom:95px; background:#007bff; }
+.email{ bottom:170px; background:#d44638; }
+
+/* MENU */
+.menu-btn{
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.menu.active{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:80px;
+    right:8%;
+    background:#002c7d;
+    padding:15px;
+    border-radius:10px;
+    width:200px;
+}
+
+.menu.active a{
+    margin:10px 0;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .hero h1{font-size:40px;}
+    .hero h2{font-size:20px;}
+    .logo span{font-size:18px;}
+    section{padding:50px 5%;}
+
+    .menu{
+        display:none;
+        flex-direction:column;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+}
+
+/* IMAGE SEO SUPPORT (NO VISUAL CHANGE) */
+img{
+    max-width:100%;
+    height:auto;
+}
+</style>
+
+<!-- STRUCTURED DATA (SEO BOOST) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Jadhav Engineering",
+  "image": "https://cdn.corenexis.com/files/c/5896827720.jpg",
+  "url": "https://jadhavengineering.xyz",
+  "telephone": "+91 8976186381",
+  "email": "jadhavengineeringg@gmail.com",
+  "description": "Mechanical Design, CAD Drafting, 3D Modeling, GA Drawings, Fabrication Drawings and Engineering Services in India.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "India"
+  }
+}
+</script>
+
+</head>
+
+<body oncontextmenu="return false;">
+
+<header>
+
+<nav>
+
+<div class="menu-btn">
+<i class="fas fa-bars"></i>
+</div>
+
+<div class="logo">
+    <img src="https://cdn.corenexis.com/files/c/5896827720.jpg" alt="Jadhav Engineering Logo">
+    <span>JADHAV ENGINEERING</span>
+</div>
+
+<div class="menu">
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#software">Software</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+<div class="hero">
+<h1>JADHAV ENGINEERING</h1>
+<h2>Engineering Design & Drafting Services</h2>
+<p>
+Professional Mechanical Design, 2D Drafting, 3D Modeling,
+GA Drawings, Fabrication Drawings, BOM Preparation and Engineering Documentation Services.
+</p>
+
+<div class="hero-buttons">
+
+    <a href="#portfolio" class="btn">View Portfolio</a>
+
+    <a href="new-website.html" class="btn secondary">
+        Visit Our New Website
+    </a>
+
+</div>
+
+</div>
+
+</header>
+
+<section id="about">
+<h2 class="title">About Us</h2>
+
+<div class="about">
+
+<p>
+Jadhav Engineering provides professional Mechanical Design and Engineering Drawing Services for industrial and fabrication projects.
+</p>
+
+<br>
+
+<p>
+We specialize in Fabrication Drawings, GA Drawings, 2D Drafting, 3D CAD Modeling, BOM Preparation, Weight Estimation, and Center of
+ Gravity (CG) Calculations. Our expertise includes Pressure Vessels, Heat Exchangers, Boilers, Tanks, and other fabricated equipment, 
+ delivering accurate, manufacturing-ready drawings that follow industry standards.
+
+</p>
+
+<br>
+
+
+<br>
+
+<p>
+We also design Office and Industrial Layouts, focusing on efficient space planning, functionality, and practical execution.
+</p>
+<br>
+
+
+<p>
+At Jadhav Engineering, we are committed to providing accurate, reliable, and cost-effective engineering solutions with on-time delivery. 
+Explore our projects to see our work, and contact us for professional engineering design and drafting services.
+</p>
+
+</div>
+</section>
+
+<section id="services">
+<h2 class="title">Our Services</h2>
+<div class="services">
+
+<div class="card"><h3>2D Drafting</h3><p>Accurate technical drawings for manufacturing and fabrication work.</p></div>
+<div class="card"><h3>3D Modeling</h3><p>Detailed 3D models for parts, assemblies, and visualization.</p></div>
+<div class="card"><h3>Fabrication Drawings</h3><p>Shop-ready drawings for smooth production and assembly process.</p></div>
+<div class="card"><h3>Mechanical Design</h3><p>Complete machine and equipment design solutions.</p></div>
+<div class="card"><h3>Reverse Engineering</h3><p>Convert physical components into accurate digital models.</p></div>
+<div class="card"><h3>BOM Preparation</h3><p>Material list preparation and cost estimation.</p></div>
+<div class="card"><h3>Fixture Design</h3><p>We design trolleys and fixtures for efficient material handling in manufacturing.</p></div>
+<div class="card"><h3>Layout Planning</h3><p>We create optimized house, civil, and office layout designs.</p></div>
+
+</div>
+</section>
+
+<section id="portfolio">
+<h2 class="title">Our Portfolio</h2>
+
+<div class="portfolio">
+
+<div class="project">
+<img src="https://cdn.corenexis.com/files/c/7727264720.png" alt="Chlorine Expansion Tank Engineering Drawing">
+<h3>DETAILS FOR CHLORINE EXPANSION TANK.</h3>
+</div>
+
+<div class="project">
+<img src="https://cdn.corenexis.com/f/xqxxZwkw2Tp.png" alt="Steam Boiler Engineering Design">
+<h3>300kg Smoke Tube Type Steam Boiler (Wood Fired)</h3>
+</div>
+
+<div class="project">
+<img src="https://cdn.corenexis.com/files/c/8821535720.png" alt="Heat Exchanger CAD Model">
+<h3>Heat Exchanger</h3>
+</div>
+
+<div class="project">
+<img src="https://cdn.corenexis.com/f/bKP7EXUcg1P.png" alt="Heat Exchanger CAD Model">
+<h3>2D CAD Office Layout With Furniture Arrangement And Workspace Planning.</h3>
+</div>
+
+<div class="project">
+<img src="https://cdn.corenexis.com/f/r0wKjoJbovg.png" alt="Heat Exchanger CAD Model">
+<h3>Pulley Fabrication And Assembly Drawing.</h3>
+</div>
+
+<div class="project">
+<img src="https://cdn.corenexis.com/f/J8mMixtIZZT.png" alt="Heat Exchanger CAD Model">
+<h3>Fabrication Drawing of 200Kg Steam Boiler Coil.</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="software">
+<h2 class="title">Software Expertise</h2>
+<div class="software">
+<div>Autocad</div>
+<div>Solidworks</div>
+<div>UG NX</div>
+<div>Creo</div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+<p><strong>Sanskar Jadhav</strong></p>
+<p>📞 8976186381</p>
+<p>📧 jadhavengineeringg@gmail.com</p>
+</section>
+
+<a href="mailto:jadhavengineeringg@gmail.com" class="email"><i class="fas fa-envelope"></i></a>
+<a href="tel:+918976186381" class="call"><i class="fas fa-phone"></i></a>
+<a href="https://wa.me/918976186381" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+
+<footer>
+© 2026 Jadhav Engineering | Mechanical Design & Engineering Services
+</footer>
+
+<script>
+document.querySelector(".menu-btn").onclick = function(){
+    document.querySelector(".menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
